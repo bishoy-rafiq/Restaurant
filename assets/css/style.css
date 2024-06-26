@@ -427,7 +427,7 @@ transition: border-color var(--transition-2);
 .input-field:focus { border-color: var(--gold-crayola); }
 
 .icon-wrapper {
-  width: 350px;
+  width: 300px;
   position: relative;
   margin-block-end: 20px;
 }
@@ -1207,17 +1207,15 @@ textarea.input-field {
   #FOOTER
 \*-----------------------------------*/
 
-.footer-top { margin-inline-end: 70px;}
+.footer-top { margin-inline: 70px;}
 
-.footer-brand .input-field {
-  width: 40%; 
-}
+
 
 .footer-brand {
   position: relative;
-  padding: 50px 40px;
+  padding: 40px 40px;
   background: var(--smoky-black-1) url(../images/footer-form-bg.png);
-  background-position: center top;
+  background-position: center ;
 background-repeat: repeat;
 }
 
@@ -1268,13 +1266,8 @@ background-repeat: repeat;
   color: var(--white);
 }
 
-.footer-brand .icon-wrapper { margin-block-end: 0;}
-.footer-brand .icon-wrapper .input-field {
-  cursor: text;
-  margin: 0 0 10px;
-  }
 
-  .footer-brand .btn { min-width: 100%;}
+
 
    .footer-list {
     display: grid;
@@ -1504,24 +1497,130 @@ background-repeat: repeat;
   margin-inline: auto;
  }
 
- .footer .input-wrapper { position: relative; }
 
- .footer .input-field {
-  margin-block-start: 0;
-  padding-inline-end: 285px;
- }
 
- .footer-brand .btn {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  min-width: max-content;
- }
+
 
 
 }
 
+
+@media (min-width: 300px), (max-width: 300px),(min-width: 350px), (max-width: 350px)  {
+  /**
+  *Custom property
+  */
+
+  :root {
+
+    /**
+    * typography
+    */
+
+    --fontSize-body-2: 2rem;
+
+  }
+
+/**
+* reused style
+*/
+
+:is(.service, .about) .section-text {
+  max-width: 420px;
+  margin-inline: auto;
+}
+
+.contact-number { --fontSize-body-1: 3rem; }
+
+
+/**
+* topbar
+*/
+
+
+
+/**
+* header
+**/
+.navbar.active {
+  max-width: 250px;
+}
+
+
+/**
+*HERO
+*/
+
+.hero-btn { transform: scale(0.7); }
+
+/**
+* servis
+*/
+
+.service .container {
+  max-width: 420px;
+  margin-inline: auto;
+}
+
+/**a
+*about
+*/
+
+ .about .container { gap: 80px; }
+
+ .about-banner > .w-100 { padding-inline-start: 90px; }
+
+ .about .abs-img-1 { width: 285px; }
+
+ .about.contact-number { --fontSize-body-1: 2.4rem; }
+
+ /**
+ *menu
+ */
+
+.grid-list .menu-card {
+justify-content: flex-end;
+}
+
+
+ .menu-card .title-wrapper  {
+  align-items: center;
+  gap: 2px;
+ }
+
+
+
+
+
+
+ /**
+ *event
+ */
+
+ .event .container {
+  max-width: 420px;
+  margin-inline: auto; 
+ }
+ .icon-wrapper {
+  width: 80%;
+ }
+
+ /**
+ * footer\
+ */
+.grid-list {
+  justify-content: center;
+}
+ .footer-brand > * {
+  max-width: 260px;
+  margin-inline: auto;
+
+ }
+
+
+
+
+
+}
 
 /**
 * respponsive for larger than 768px screen
@@ -1975,5 +2074,13 @@ column-gap: 20px;
   }
 
 
+
+}
+
+
+@media (max-width:450px){
+  html{
+    font-size: 50%;
+  }
 
 }
